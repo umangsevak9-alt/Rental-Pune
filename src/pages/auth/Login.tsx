@@ -83,9 +83,19 @@ export default function Login() {
           </button>
         </form>
         
-        <div className="mt-6 text-center text-xs text-neutral-300 bg-[#080f1a] p-3 rounded-xl border border-white/10">
-          <p className="text-[#d4a359] font-medium">Demo Credentials:</p>
-          <p className="text-neutral-400 font-mono mt-0.5">admin@admin.com / admin123</p>
+        <div className="mt-6 text-center text-xs text-neutral-300 bg-[#080f1a] p-3 rounded-xl border border-white/10 flex flex-col items-center">
+          <p className="text-[#d4a359] font-medium">Default Admin Credentials:</p>
+          <p className="text-neutral-300 font-mono mt-0.5 text-xs">admin@admin.com / admin123</p>
+          <button
+            type="button"
+            onClick={() => {
+              setEmail('admin@admin.com');
+              setPassword('admin123');
+            }}
+            className="mt-2 text-[11px] font-semibold text-[#d4a359] hover:underline cursor-pointer bg-[#d4a359]/10 px-2.5 py-1 rounded-md border border-[#d4a359]/20"
+          >
+            Auto-fill Credentials
+          </button>
         </div>
       </div>
     </div>
